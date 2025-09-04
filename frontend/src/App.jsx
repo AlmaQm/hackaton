@@ -6,12 +6,20 @@ import MapaTransportes from "./components/MapaTransportes";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import navbar from "./components/Navbar";
+import PrivateRoute from "./Components/PrivateRoute";
+import Botonarriba from "./components/Botonarriba";
 
 export default function App() {
    return (
       <>
          <Header />
          <Navbar />
+         <Routes>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Inicio />} />
+            <Route path="/" element={<Inicio />} />
+         </Routes>
          <div className="container py-4">
             <h1 className="text-center mb-4">Fundación Nexa – Gestión</h1>
             <Navbar />
@@ -28,6 +36,7 @@ export default function App() {
                </div>
             </div>
          </div>
+         <ScrollToTop />
          <Footer />
       </>
    );
